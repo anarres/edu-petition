@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   # GET /users.xml
   def index
     @users = User.all
-    @users = @users.paginate(:page => params[:page], :per_page => 4)
-
+    @users = @users.reverse	# Hacky way to get entries to show in reverse order
+    @users = @users.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

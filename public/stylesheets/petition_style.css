@@ -1,0 +1,16 @@
+body {
+	background-color: #f4d8bd;
+}
+#container {
+	background-color: white;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 20px;
+}
+table {
+	border: 1px solid #dddddd;
+	font-size: 1.2em;
+}
+p {
+	font-size: 1.2em;
+}
