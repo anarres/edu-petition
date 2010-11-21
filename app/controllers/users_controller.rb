@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   # GET /users.xml
   def index
     @users = User.all
+    @users = @users.paginate(:page => params[:page], :per_page => 4)
+
 
     respond_to do |format|
       format.html # index.html.erb
