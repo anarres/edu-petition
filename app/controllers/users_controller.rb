@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @users = @users.reverse	# Hacky way to get entries to show in reverse order
-    @users = @users.paginate(:page => params[:page], :per_page => 10)
+    @users = @users.paginate(:page => params[:page], :per_page => 30)
 
     respond_to do |format|
       format.html # index.html.erb
