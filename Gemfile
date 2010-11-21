@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 
+gem "will_paginate", ">=2.3.12"  
+
 #gem 'rails', '3.0.3'
 
 # Bundle edge Rails instead:
