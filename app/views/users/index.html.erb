@@ -1,25 +1,42 @@
-<h1>Listing users</h1>
+<h1>Defend Education Petition</h1>
+
+<p>We the undersigned write to express our support for the student
+protests that took place in Cambridge today. We believe that the
+students, in their hundreds along with local sixth formers, exercised
+a democratic right to peaceful direct action to protest the cutbacks
+in education and the proposed rise in tuition fees.</p>
+
+<p>We therefore express our dismay that Cambridge police assaulted
+university students on university property. We understand that batons
+were used to deter students from the Old Schools, actions which seem
+unnecessarily and disproportionately violent. We seek a commitment
+from the University that such disproportionate force will not be
+sanctioned again.</p>
+
+<p>We urge the university to support its own students and staff - and all
+those across the sector, and across the country - in campaigning
+against the ongoing attacks on higher education.</p>
+
+<br />
+
+<h3><%= link_to 'Sign the petition!', new_user_path %></h3>
 
 <table>
   <tr>
+    <th></th>
     <th>Name</th>
     <th>Position</th>
     <th>University</th>
     <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.id %></td>
     <td><%= user.name %></td>
     <td><%= user.position %></td>
     <td><%= user.university %></td>
     <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 
 <% end %>
@@ -29,4 +46,4 @@
 <%= will_paginate %>
 <br />
 
-<%= link_to 'New User', new_user_path %>
+
